@@ -12,8 +12,8 @@ this backup-manager helps you back up files in Windows
 -- GUI: launch backup_manager.gui.app.py to access the user-friendly local web app based gui.
 
 
-![backup manager gui main page](/screenshots/1.png)
-![backup manager gui backups page](/screenshots/2.png)
+![backup manager gui main page](/blob/master/screenshots/1.PNG)
+![backup manager gui backups page](/blob/master/screenshots/2.PNG)
 
 
 QUICK START 
