@@ -39,7 +39,7 @@
   <div style="margin-top: 50px">
 
     {% for idx, title, description, src, dest, arrow, batch in plans %}
-    <div class="card state elevation-00">
+    <div class="card elevation-00">
     <form>
       <input type="hidden" class="idx" name="idx" value={{idx}}>
       <input class="input-short" type="text" name="title" placeholder="title"  value="{{title}}" required autofocus>
@@ -67,8 +67,8 @@
     {% endfor %}
 
 
-
-    <form class="card adder" style="display: none" id="adder">
+<div class="card elevation-00 adder" style="display: none" id="adder">
+    <form>
       <input type="hidden" name="idx" class="idx" value={{idx}}>
       <input class="input-short" type="text" name="title" placeholder="title"  value="{{title}}" required autofocus>
       <input class="input-large" type="text" name="description"  placeholder="description" value="{{description}}" required autofocus>
@@ -83,8 +83,7 @@
       <button class="add tile tile-horizontal tile-update" type="button" style="margin-bottom: 10px">add</button>
     </div>
     </form>
-
-
+</div>
   </div>
 </div>
 

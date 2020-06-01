@@ -11,8 +11,9 @@
     --color-surface-16: #343434;
     --color-surface-24: #383838;
 
-    /* surface state colors */
-    --color-surface-00-hover: #1e1e1e;
+    /* surface state colors - hover */
+    --color-surface-00-hover: #272727;
+    /* TODO */
     --color-surface-01-hover: #1d1d1d;
     --color-surface-02-hover: #222222;
     --color-surface-03-hover: #242424;
@@ -22,6 +23,19 @@
     --color-surface-12-hover: #333333;
     --color-surface-16-hover: #343434;
     --color-surface-24-hover: #383838;
+
+    /* surface state colors - focus */
+    --color-surface-00-focus: #393939;
+    /* TODO */
+    --color-surface-01-focus: #1d1d1d;
+    --color-surface-02-focus: #222222;
+    --color-surface-03-focus: #242424;
+    --color-surface-04-focus: #272727;
+    --color-surface-06-focus: #2c2c2c;
+    --color-surface-08-focus: #2e2e2e;
+    --color-surface-12-focus: #333333;
+    --color-surface-16-focus: #343434;
+    --color-surface-24-focus: #383838;
 }
 
 .elevation-00{
@@ -58,4 +72,76 @@
 
 .elevation-24{
     background-color: var(--color-surface-24);
+}
+
+.elevation-00:hover{
+    background-color: var(--color-surface-00-hover);
+}
+
+.elevation-02:hover{
+    background-color: var(--color-surface-02-hover);
+}
+
+.elevation-03:hover{
+    background-color: var(--color-surface-03-hover);
+}
+
+.elevation-04:hover{
+    background-color: var(--color-surface-04-hover);
+}
+
+.elevation-06:hover{
+    background-color: var(--color-surface-06-hover);
+}
+
+.elevation-08:hover{
+    background-color: var(--color-surface-08-hover);
+}
+
+.elevation-12:hover{
+    background-color: var(--color-surface-12-hover);
+}
+
+.elevation-16:hover{
+    background-color: var(--color-surface-16-hover);
+}
+
+.elevation-24:hover{
+    background-color: var(--color-surface-24-hover);
+}
+
+.elevation-00:focus{
+    background-color: var(--color-surface-00-focus);
+}
+
+.elevation-02:focus{
+    background-color: var(--color-surface-02-focus);
+}
+
+.elevation-03:focus{
+    background-color: var(--color-surface-03-focus);
+}
+
+.elevation-04:focus{
+    background-color: var(--color-surface-04-focus);
+}
+
+.elevation-06:focus{
+    background-color: var(--color-surface-06-focus);
+}
+
+.elevation-08:focus{
+    background-color: var(--color-surface-08-focus);
+}
+
+.elevation-12:focus{
+    background-color: var(--color-surface-12-focus);
+}
+
+.elevation-16:focus{
+    background-color: var(--color-surface-16-focus);
+}
+
+.elevation-24:focus{
+    background-color: var(--color-surface-24-focus);
 }
