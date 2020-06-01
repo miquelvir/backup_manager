@@ -24,7 +24,7 @@ def echo_centered(text: str) -> None:
     click.echo(" " * empty_chars + text)
 
 
-def get_plans(ctx: click.Context) -> Dict[dict]:
+def get_plans(ctx: click.Context) -> Dict[int, dict]:
     return ctx.obj[PLANS]
 
 
