@@ -1,0 +1,225 @@
+:root {
+    --color-white: #ffffff;
+    --color-error: #CF6679;
+    --color-primary: #ebeb00;
+
+    --color-primary-dark: #232311;
+
+    --color-background: #121212;
+
+    --onSurface-disabled-color: rgba(255, 255, 255, 0.38);
+    --onSurface-medium-color: rgba(255, 255, 255, 0.60);
+    --onSurface-high-color: rgba(255, 255, 255, 0.87);
+
+    --transition-time: 0.3s;
+
+}
+
+
+.card{
+    margin-bottom: 20px;
+    padding: 10px;
+    transition: 1s;
+    border-radius: 5px;
+    position:relative;overflow:hidden;
+}
+
+.card:hover{
+    background-color: var(--color-surface-00-hover);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+body,h1,h2, h3, h4, button {font-family: "Raleway", sans-serif; color: whitesmoke}
+body,html {height: 100%}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+.fadein{
+  animation-name: fadeIn;
+  animation-duration: 0.35s;
+  transition-timing-function: ease-in;
+  animation-fill-mode: both;
+}
+
+
+body {
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  width: 1px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #F8FD5A;
+  border-radius: 10px;
+}
+
+
+  html{
+    background: #121212;
+  }
+  .h1{
+    font-size:40px;
+  }
+  .tile {
+    transition: 0.3s;
+    margin-right: 20px;
+  /* font */
+  color: black;
+  font-size: 20px;
+  font-family: monospace;
+
+  /* remove blue underline */
+  text-decoration: none;
+
+  /* border */
+    cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+    width: 120px;
+    height: 180px;
+
+
+  /* other */
+  background-color: white;
+}
+  button:focus {outline:0;}
+  input:focus {outline:0}
+  input:invalid {background: #383838;}
+  .tile:hover{
+    background-color: #F8FD5A;
+  }
+  .tile-horizontal{
+      width: 180px;
+      height: 50px;
+    align-items: end;
+  }
+  .tile-update{
+    background-color: #141518;
+    color: #F8FD5A;
+  }
+  .tile-remove{
+    background-color: #141518;
+    color: whitesmoke;
+  }
+  .tile-selected{
+      background-color: #F8FD5A;
+        color: #141518;
+  }
+  .tile-arrow{
+    width: 50px;
+    text-align: center;
+  }
+  .tile-update:hover, .tile-remove:hover{
+    color: #141518;
+  }
+  .success{
+    color: #41DA90;
+  }
+   .success:hover{
+    background-color: #41DA90;
+  }
+  .error{
+    color: #B00020;
+  }
+  .error:hover{
+    background-color: #B00020;
+  }
+  .tile-softer{
+    background-color: #313131;
+    color: whitesmoke;
+  }
+   .tile-softer:hover{
+    color: #313131;
+  }
+  form{
+    width: 100%;
+  }
+  input, textarea, text{
+  padding: 12px 20px;
+  margin: 8px 5px;
+  display: inline-block;
+  border: none;
+  border-radius: 4px;
+  box-sizing: border-box;
+    background-color: #121212;
+    transition: 0.3s;
+    color: whitesmoke;
+  }
+  .input-large{
+      width: 30%;
+  }
+  .input-short{
+      width: 10%;
+  }
+  input:hover{
+    background-color: black;
+  }
+  .unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.toast {
+    width:200px;
+    height:auto;
+    margin-left: 20px;
+    background: #383838;
+    color: #F0F0F0;
+    font-size: 15px;
+    padding:10px;
+    text-align:center;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+    -moz-box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+    box-shadow: 0px 0px 24px -1px rgba(56, 56, 56, 1);
+}
+
+
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+.shake-effect {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 30px;
+}

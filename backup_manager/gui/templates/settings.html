@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html class="html" lang="ee">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>backup manager</title>
+    <script src="../static/js/jquery-3.5.1.js"></script>
+<script src="../static/js/backups.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../static/css/styles.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="body">
+
+<div style="padding-left: 50px;padding-right: 50px;padding-top: 25px;" class="fadein">
+  <div style="padding-bottom: 70px">
+    <h1 class="unselectable h1"><span style="color: #F8FD5A; cursor: pointer" onclick="window.location.href='/';">bm</span> settings</h1>
+  </div>
+
+
+  <div style="margin-top: 50px">
+    <form class="card adder" id="adder">
+      <label style="margin-right: 30px; margin-left: 30px">pushbullet token</label>
+      <input class="input-large" type="text" name="token" placeholder="token"  value="{{token}}" required autofocus>
+      <br>
+      <div style="display: flex; justify-content: flex-end">
+      <button class="save tile tile-horizontal tile-update" type="button" style="margin-bottom: 10px">save</button>
+    </div>
+    </form>
+  </div>
+</div>
+
+ <div id="footer">
+        <div class='toast' style='display:none;'>Event Created</div>
+    </div>
+
+</body>
+
+</html>

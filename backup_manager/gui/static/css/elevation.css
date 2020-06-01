@@ -1,0 +1,61 @@
+:root {
+    /* surface colors */
+    --color-surface-00: #1e1e1e;
+    --color-surface-01: #1d1d1d;
+    --color-surface-02: #222222;
+    --color-surface-03: #242424;
+    --color-surface-04: #272727;
+    --color-surface-06: #2c2c2c;
+    --color-surface-08: #2e2e2e;
+    --color-surface-12: #333333;
+    --color-surface-16: #343434;
+    --color-surface-24: #383838;
+
+    /* surface state colors */
+    --color-surface-00-hover: #1e1e1e;
+    --color-surface-01-hover: #1d1d1d;
+    --color-surface-02-hover: #222222;
+    --color-surface-03-hover: #242424;
+    --color-surface-04-hover: #272727;
+    --color-surface-06-hover: #2c2c2c;
+    --color-surface-08-hover: #2e2e2e;
+    --color-surface-12-hover: #333333;
+    --color-surface-16-hover: #343434;
+    --color-surface-24-hover: #383838;
+}
+
+.elevation-00{
+    background-color: var(--color-surface-00);
+}
+
+.elevation-02{
+    background-color: var(--color-surface-02);
+}
+
+.elevation-03{
+    background-color: var(--color-surface-03);
+}
+
+.elevation-04{
+    background-color: var(--color-surface-04);
+}
+
+.elevation-06{
+    background-color: var(--color-surface-06);
+}
+
+.elevation-08{
+    background-color: var(--color-surface-08);
+}
+
+.elevation-12{
+    background-color: var(--color-surface-12);
+}
+
+.elevation-16{
+    background-color: var(--color-surface-16);
+}
+
+.elevation-24{
+    background-color: var(--color-surface-24);
+}

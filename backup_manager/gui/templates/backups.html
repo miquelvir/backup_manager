@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html class="html" lang="ee">
+
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>backup manager</title>
+    <script src="../static/js/jquery-3.5.1.js"></script>
+<script src="../static/js/backups.js"></script>
+<script>
+  function getArrow(elem) {
+  if (elem.value === "→"){
+    elem.value = "↔";
+  } else {
+    elem.value = "→";
+  }
+}
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+      <link href="../static/css/styles.css" rel="stylesheet">
+    <link href="../static/css/elevation.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body class="body">
+
+<div style="padding-left: 50px;padding-right: 50px;padding-top: 25px;" class="fadein">
+  <div style="padding-bottom: 70px">
+    <h1 class="unselectable h1"><span style="color: #F8FD5A; cursor: pointer" onclick="window.location.href='/';">bm</span> backups</h1>
+  </div>
+  <table>
+      <tr>
+        <td><button class="new tile tile-horizontal unselectable tile-softer">add backup</button></td>
+      </tr>
+  </table>
+
+
+  <div style="margin-top: 50px">
+
+    {% for idx, title, description, src, dest, arrow, batch in plans %}
+    <div class="card state elevation-00">
+    <form>
+      <input type="hidden" class="idx" name="idx" value={{idx}}>
+      <input class="input-short" type="text" name="title" placeholder="title"  value="{{title}}" required autofocus>
+      <input class="input-large" type="text" name="description"  placeholder="description" value="{{description}}" required autofocus>
+      <br>
+      <input class="input-large" type="text" name="src"  placeholder="src path"  value="{{src}}" required autofocus>
+      <input type="button" name="arrow" style="font-size: 20px;" class="tile tile-horizontal tile-update tile-arrow" onclick="myFunction(this)" value={{arrow}}>
+      <input class="input-large" type="text" name="dest" placeholder="dest path" value="{{dest}}" required autofocus>
+      <br>
+      <input class="input-short" type="text" name="batch" placeholder="batch" value="{{batch}}" required autofocus>
+      <div style="display: flex; justify-content: flex-end">
+        <button class="schedule tile tile-horizontal tile-remove" type="button" style="margin-bottom: 10px">schedule</button>
+      <button class="remove tile tile-horizontal tile-remove" type="button" style="margin-bottom: 10px">remove</button>
+      <button class="update tile tile-horizontal tile-update" type="button" style="margin-bottom: 10px">update</button>
+    </div>
+      <div class="times card card-upper" style="display: none">
+
+        <button class="sticky tile tile-horizontal tile-remove" type="button">daily</button>
+        <button class="sticky tile tile-horizontal tile-remove" type="button">weekly</button>
+        <button class="sticky tile tile-horizontal tile-remove" type="button">monthly</button>
+        <button class="sticky tile tile-horizontal tile-remove" type="button">on idle</button>
+</div>
+    </form>
+</div>
+    {% endfor %}
+
+
+
+    <form class="card adder" style="display: none" id="adder">
+      <input type="hidden" name="idx" class="idx" value={{idx}}>
+      <input class="input-short" type="text" name="title" placeholder="title"  value="{{title}}" required autofocus>
+      <input class="input-large" type="text" name="description"  placeholder="description" value="{{description}}" required autofocus>
+      <br>
+      <input class="input-large" type="text" name="src" placeholder="src path"  value="{{src}}" required autofocus>
+      <input type="button" name="arrow" style="font-size: 20px;" class="tile tile-horizontal tile-update tile-arrow" onclick="getArrow(this)" value="→">
+      <input class="input-large" type="text" name="dest" placeholder="dest path" value="{{dest}}" required autofocus>
+      <br>
+      <input class="input-short" type="text" name="batch" placeholder="batch" value="{{batch}}" required autofocus>
+      <div style="display: flex; justify-content: flex-end">
+        <button class="discard tile tile-horizontal tile-remove" type="button" style="margin-bottom: 10px">discard</button>
+      <button class="add tile tile-horizontal tile-update" type="button" style="margin-bottom: 10px">add</button>
+    </div>
+    </form>
+
+
+  </div>
+</div>
+
+ <div id="footer">
+        <div class='toast' style='display:none;'>Event Created</div>
+    </div>
+
+</body>
+
+</html>
